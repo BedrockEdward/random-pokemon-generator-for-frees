@@ -1,32 +1,121 @@
 body {
-  font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
-  background-color: #656565;
-}
-
-.button-container {
-  display: flex;
-  gap: 20px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: 3px solid #ffadad;
-  background-color: #ffffff;
-  border-radius: 8px;
-  color: black;
-}
-
-#label {
+  background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+  font-family: "Segoe UI", sans-serif;
   color: white;
 }
 
-button:hover {
-  background-color: #70fcff;
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.panel {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Column background tint */
+.panel:nth-child(1) { background: #2a2a3d; }
+.panel:nth-child(2) { background: #243b55; }
+.panel:nth-child(3) { background: #3b2430; }
+
+/* Top generate buttons */
+.btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 0 12px #00c6ff;
+}
+
+/* Rows */
+.row, .poke-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Pokémon sprite */
+.poke-row img {
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+}
+
+/* Output boxes */
+.box {
+  flex: 1;
+  height: 60px;
+  background: rgba(255,255,255,0.08);
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.box:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* Reroll buttons */
+.reroll {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  background: #444;
+  color: #00c6ff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.reroll:hover {
+  background: #666;
+}
+.top-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.count-input {
+  width: 70px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+.top-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.count-input {
+  width: 70px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  background: rgba(255,255,255,0.1);
+  color: white;
 }

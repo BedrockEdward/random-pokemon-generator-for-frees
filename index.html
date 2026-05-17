@@ -3,23 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Three Buttons</title>
+  <title>Pokemon Randomizer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <div id="label">hellno</div>
 
+<div class="container">
 
-  <div class="button-container">
-    <button id="button1">Pokemon</button>
-    <button id="button2">Ability</button>
-    <button id="button3">Moveset</button>
+  <!-- ===== Left Column : Pokémon ===== -->
+  <div class="panel">
+    <div class="top-bar">
+      <button id="btn-pokemon" class="btn">Pokemon</button>
+
+      <input
+        type="number"
+        id="pokemon-count"
+        class="count-input"
+        min="1"
+        max="6"
+        value="3"
+      />
+    </div>
+    <div id="pokemon-results">
   </div>
+  </div>
+
+
+  <!-- ===== Middle Column : Ability ===== -->
+  <div class="panel">
+    <div class="top-bar">
+  <button id="btn-ability" class="btn">Ability</button>
+
+  <input
+    type="number"
+    id="ability-count"
+    class="count-input"
+    min="1"
+    max="6"
+    value="3"
+  />
+    </div>
+    <div id="ability-results">
+  </div>
+  </div>
+
+
+  <!-- ===== Right Column : Moves ===== -->
+  <div class="panel">
+    <div class="top-bar">
+      <button id="btn-moves" class="btn">Moveset</button>
+
+      <input
+        type="number"
+        id="move-count"
+        class="count-input"
+        min="1"
+        max="8"
+        value="4"
+      />
+    </div>
+    <div id="move-results">
+  </div>
+  </div>
+<div class="panel">
+  <button id="btn-showdown" class="btn">Generate Showdown Script</button>
+  <textarea id="showdown-output" rows="12" style="width:100%; margin-top:15px;"></textarea>
+  <button id="btn-copy" class="btn">Copy Script</button>
 </div>
-  <script src="pokemon.js"></script>
-  <script src="ability.js"></script>
-  <script src="moves.js"></script>
-  <script src="script.js"></script>
+</div>
+<script src="pokemon.js"></script>
+<script src="ability.js"></script>
+<script src="moves.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
